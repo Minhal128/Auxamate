@@ -23,7 +23,7 @@ export function ServicesSection() {
       description: "Remove repetitive manual work with intelligent automations that save time and reduce errors",
       colors: [
         [168, 85, 247],
-        [236, 72, 153],
+        [236, 72, 103],
       ],
     },
     {

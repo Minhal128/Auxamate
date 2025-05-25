@@ -21,12 +21,12 @@ export default function Home() {
     <main className="min-h-screen bg-background dot-pattern">
       <Navbar />
       <HeroSection />
-      <SponsorsSection />
       <AboutSection />
       <ServicesSection />
+      <PlatformsSection />
+      <SponsorsSection />
       <HowItWorksSection />
       <IndustriesSection />
-      <PlatformsSection />
       <IntegrationsSection />
       <SecuritySection />
       <PricingSection />
