@@ -34,7 +34,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection("hero")}>
           <Logo />
-          <span className="text-xl font-bold">AUXAMATE</span>
+          {/* <span className="text-xl font-bold">AUXAMATE</span> */}
         </div>
 
         <nav className="hidden md:flex items-center gap-6">
