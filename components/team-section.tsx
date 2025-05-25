@@ -1,48 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Twitter, ExternalLink } from "lucide-react"
+import { Github, Linkedin, Twitter, ExternalLink, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function TeamSection() {
   const team = [
+   
     {
-      name: "Alex Johnson",
-      role: "AI Research Lead",
-      bio: "Leading AI research and development with 10+ years of experience in machine learning and neural networks.",
-      portfolio: "https://alexjohnson.dev",
-      socialLinks: {
-        twitter: "https://twitter.com/alexjohnson",
-        linkedin: "https://linkedin.com/in/alexjohnson",
-        github: "https://github.com/alexjohnson",
-      },
-    },
-    {
-      name: "Sarah Chen",
-      role: "Chief Technology Officer",
-      bio: "Expert in AI architecture and implementation with a background in enterprise solutions and scalable systems.",
-      portfolio: "https://sarahchen.tech",
-      socialLinks: {
-        twitter: "https://twitter.com/sarahchen",
-        linkedin: "https://linkedin.com/in/sarahchen",
-        github: "https://github.com/sarahchen",
-      },
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "AI Solutions Architect",
-      bio: "Specializes in designing custom AI solutions for complex business problems and enterprise integrations.",
-      portfolio: "https://michaelrodriguez.ai",
-      socialLinks: {
-        twitter: "https://twitter.com/mrodriguez",
-        linkedin: "https://linkedin.com/in/michaelrodriguez",
-        github: "https://github.com/mrodriguez",
-      },
-    },
-    {
-      name: "Priya Patel",
-      role: "Machine Learning Engineer",
+      name: "Mahad Mazhar",
+      role: "CEO & Founder",
       bio: "Expert in developing and optimizing machine learning models for production environments and real-time applications.",
+      phone: "+1 (555) 123-4567",
       portfolio: "https://priyapatel.ml",
       socialLinks: {
         twitter: "https://twitter.com/priyapatel",
@@ -76,7 +45,7 @@ export function TeamSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex justify-center">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -86,7 +55,7 @@ export function TeamSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-auxamate-pink/10 to-auxamate-purple/10 border border-auxamate-pink/20 p-6 h-[350px] flex flex-col hover:border-auxamate-pink/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-auxamate-pink/10 to-auxamate-purple/10 border border-auxamate-pink/20 p-6 h-[400px] w-full max-w-sm flex flex-col hover:border-auxamate-pink/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 {/* Header with name and role */}
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
@@ -95,6 +64,21 @@ export function TeamSection() {
 
                 {/* Bio text */}
                 <p className="text-sm text-muted-foreground mb-6 flex-grow">{member.bio}</p>
+
+                {/* Phone number */}
+                {member.phone && (
+                  <div className="mb-4 p-3 bg-gradient-to-r from-auxamate-pink/10 to-auxamate-purple/10 rounded-lg border border-auxamate-pink/20">
+                    <div className="flex items-center gap-2">
+                      <Phone className="h-4 w-4 text-auxamate-pink" />
+                      <a
+                        href={`tel:${member.phone}`}
+                        className="text-sm font-medium text-white hover:text-auxamate-pink transition-colors"
+                      >
+                        {member.phone}
+                      </a>
+                    </div>
+                  </div>
+                )}
 
                 {/* Portfolio link */}
                 <Button
