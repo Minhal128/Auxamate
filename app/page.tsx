@@ -31,10 +31,10 @@ export default function Home() {
       {/* <SecuritySection /> */}
       <PricingSection />
       {/* <DashboardShowcaseSection /> */}
+      <TeamSection />
       <TestimonialsSection />
       <FAQSection />
       <ContactSection />
-      <TeamSection />
       <WorldMapSection />
       <Footer />
     </main>

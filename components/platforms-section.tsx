@@ -12,21 +12,21 @@ export function PlatformsSection() {
       icon: <Zap className="h-6 w-6" />,
       description: "Creating powerful automation workflows",
       color: "from-auxamate-pink to-auxamate-purple",
-      platforms: ["Zapier", "Make.com", "n8n", "Integromat", "Workato", "Automate.io", "Pabbly Connect"],
+      platforms: ["Zapier", "Make.com", "n8n", "Integromat", "Workato", "Automate.io", "Pabbly Connect","Many more"],
     },
     {
       title: "AI Voice & Chat Agent Platforms",
       icon: <Bot className="h-6 w-6" />,
       description: "Building natural-sounding AI voice agents and chatbots",
       color: "from-auxamate-purple to-auxamate-cyan",
-      platforms: ["Retell", "Blend", "VAPI", "ManyChat", "CloseBot", "Dialogflow"],
+      platforms: ["Retell", "Blend", "VAPI", "ManyChat", "CloseBot", "Dialogflow","Many more"],
     },
     {
       title: "CRM Platforms",
       icon: <Database className="h-6 w-6" />,
       description: "Seamless integration with AI and automation solutions",
       color: "from-auxamate-cyan to-auxamate-pink",
-      platforms: ["GoHighLevel (GHL)", "Salesforce", "HubSpot", "Zoho", "Pipedrive", "Custom CRMs"],
+      platforms: ["GoHighLevel (GHL)", "Salesforce", "HubSpot", "Zoho", "Pipedrive", "Custom CRMs","Many more"],
     },
   ]
 

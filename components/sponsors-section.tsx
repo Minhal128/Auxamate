@@ -10,11 +10,11 @@ export function SponsorsSection() {
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2ttj825j7wjwyfCs5maYJln9P7OFCv.png",
     },
     {
-      name: "Make.com",
+      name: "Make",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dVhvGqIs27G7tON2bdcEE2JBaoijv7.png",
     },
     {
-      name: "Pabbly Connect",
+      name: "n8n",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-K4swTEKCqpSaAOVOcpSv8pguAGoCUh.png",
     },
     {
@@ -29,20 +29,20 @@ export function SponsorsSection() {
       name: "Pabbly",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qkKN6g6W612bftTq3USKf89hCJJYLM.png",
     },
+    // {
+    //   name: "Automate",
+    //   logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RG7KNPWAfdsUaIBvVrj7XhhgXoRMM7.png",
+    // },
     {
-      name: "Automate.io",
-      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RG7KNPWAfdsUaIBvVrj7XhhgXoRMM7.png",
-    },
-    {
-      name: "Microsoft Power Automate",
+      name: "ManyChat",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hsgyEJS08xgJssAyA5SMVjgpgGFw6e.png",
     },
     {
-      name: "Voiceflow",
+      name: "Vapi",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GFRro1d8HkhoprRScObsLQEOQaQnu8.png",
     },
     {
-      name: "n8n",
+      name: "CloseBot",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8jOHjAllGQEEH76rQMzs81UgDCxaZQ.png",
     },
   ]

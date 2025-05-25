@@ -7,19 +7,23 @@ export function IntegrationsSection() {
   const integrations = [
     {
       title: "Unicommerce Integration",
-      description: "Connect with Unicommerce for seamless e-commerce operations.",
+      description:
+        "Streamline your e-commerce workflow by connecting directly with Unicommerce. Automate inventory, orders, and catalog management with ease.",
     },
     {
       title: "Logistics Partner Integration",
-      description: "Integrate with logistics partners for efficient delivery tracking.",
+      description:
+        "Track deliveries and optimize shipping with real-time integrations to your logistics partners, ensuring faster and more reliable fulfillment.",
     },
     {
       title: "Customer Care Tools Integration",
-      description: "Connect customer support tools for unified communication.",
+      description:
+        "Empower your support team with unified communication by integrating leading customer care platforms. Deliver faster, smarter assistance.",
     },
     {
       title: "Accounting & Finance Integration",
-      description: "Sync with accounting software for automated financial reporting.",
+      description:
+        "Automate financial reporting and sync data in real-time by connecting with top accounting software. Stay compliant and audit-ready effortlessly.",
     },
   ]
 
@@ -66,7 +70,7 @@ export function IntegrationsSection() {
                 Seamless <span className="gradient-text">Integrations</span>
               </h2>
               <p className="text-muted-foreground">
-                Connect with Unicommerce, logistics, and customer care tools to streamline your operations.
+                Supercharge your operations with effortless integrations across essential platforms.
               </p>
             </motion.div>
 

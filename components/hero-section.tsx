@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { PointerHighlight } from "@/components/ui/pointer-highlight"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Phone, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -26,11 +25,11 @@ export function HeroSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-4">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="flex flex-col items-center gap-2 mb-4">
+            <div className="flex flex-col items-center gap-3 mb-4">
               {/* AUXAMATE Logo */}
               <div className="relative">
                 <Image
-                  src="logo.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-Hmq2rftDkYRXJR2ppSIxjb6Lf08lnu.png"
                   alt="AUXAMATE Logo"
                   width={200}
                   height={50}
@@ -38,13 +37,8 @@ export function HeroSection() {
                   priority
                 />
               </div>
-              {/* Tagline */}
-              <Badge variant="outline" className="border-auxamate-pink/30 bg-background/50 backdrop-blur-sm">
-                <span className="flex items-center gap-1">
-                  <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                  AUXAMATE – AI Simplified
-                </span>
-              </Badge>
+              {/* Simple Text Tagline */}
+              <p className="text-sm text-muted-foreground">AUXAMATE – AI Simplified</p>
             </div>
           </motion.div>
 
