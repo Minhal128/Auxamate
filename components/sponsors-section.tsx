@@ -1,6 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
+import React, { useRef, useEffect, useState } from "react"
+import { motion, useAnimation } from "framer-motion"
 import Image from "next/image"
 
 export function SponsorsSection() {
@@ -69,8 +70,38 @@ export function SponsorsSection() {
       name: "Pipedrive",
       logo: "https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/f2e2e04e-14be-474e-8d90-7162080c28b0.png?auto=format%2Ccompress&fit=max&w=256&q=75&ch=Width%2CDPR.jpg",
     },
-
+    {
+      name: "Automate.io",
+      logo: "https://cdn.prod.website-files.com/5c06e16a5bdc7bce10059cc3/636fd0a4e3ca35635923c1f7_QokPx-A7eJ1q19cD9Kwhqz47IVyj_ADHIMsVw5lB-uM.png",
+    },
   ]
+
+  const rowRef = useRef(null)
+  const [rowWidth, setRowWidth] = useState(0)
+  const controls = useAnimation()
+
+  useEffect(() => {
+    if (rowRef.current) {
+      setRowWidth(rowRef.current.scrollWidth / 2) // since it's duplicated
+    }
+  }, [rowRef])
+
+  useEffect(() => {
+    if (rowWidth === 0) return
+    const animate = async () => {
+      while (true) {
+        await controls.start({
+          x: -rowWidth,
+          transition: {
+            duration: 40,
+            ease: "linear",
+          },
+        })
+        controls.set({ x: 0 })
+      }
+    }
+    animate()
+  }, [rowWidth, controls])
 
   return (
     <section className="py-12 border-y border-border/20 bg-background/50 backdrop-blur-sm overflow-hidden">
@@ -90,40 +121,13 @@ export function SponsorsSection() {
         <div className="flex overflow-hidden">
           <motion.div
             className="flex gap-8 items-center"
-            animate={{
-              x: [0, -1920],
-            }}
-            transition={{
-              x: {
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "loop",
-                duration: 40,
-                ease: "linear",
-              },
-            }}
+            ref={rowRef}
+            animate={controls}
+            style={{ x: 0 }}
           >
-            {/* First set of sponsors */}
-            {sponsors.map((sponsor, index) => (
+            {[...sponsors, ...sponsors].map((sponsor, index) => (
               <div
-                key={`first-${index}`}
-                className="flex items-center gap-4 px-6 py-4 rounded-full bg-gradient-to-r from-auxamate-pink/10 to-auxamate-purple/10 border border-auxamate-pink/20 backdrop-blur-sm whitespace-nowrap min-w-fit"
-              >
-                <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                  <Image
-                    src={sponsor.logo || "/placeholder.svg"}
-                    alt={`${sponsor.name} logo`}
-                    width={40}
-                    height={40}
-                    className="object-contain rounded-full"
-                  />
-                </div>
-                <span className="font-medium text-foreground text-sm">{sponsor.name}</span>
-              </div>
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {sponsors.map((sponsor, index) => (
-              <div
-                key={`second-${index}`}
+                key={index}
                 className="flex items-center gap-4 px-6 py-4 rounded-full bg-gradient-to-r from-auxamate-pink/10 to-auxamate-purple/10 border border-auxamate-pink/20 backdrop-blur-sm whitespace-nowrap min-w-fit"
               >
                 <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
