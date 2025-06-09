@@ -11,11 +11,11 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
 import { ContactSection } from "@/components/contact-section"
 import { IntegrationsSection } from "@/components/integrations-section"
-import { SecuritySection } from "@/components/security-section"
+// import { SecuritySection } from "@/components/security-section"
 import { TeamSection } from "@/components/team-section"
 import { WorldMapSection } from "@/components/world-map-section"
 import { Footer } from "@/components/footer"
-import {DashboardShowcaseSection} from "@/components/dashboard-showcase-section"
+// import {DashboardShowcaseSection} from "@/components/dashboard-showcase-section"
 export default function Home() {
   return (
     <main className="min-h-screen bg-background dot-pattern">
@@ -35,7 +35,7 @@ export default function Home() {
       <TestimonialsSection />
       <FAQSection />
       <ContactSection />
-      <WorldMapSection />
+      {/* <WorldMapSection /> */}
       <Footer />
     </main>
   )

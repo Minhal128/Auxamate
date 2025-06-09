@@ -38,7 +38,7 @@ export function HeroSection() {
                 />
               </div>
               {/* Simple Text Tagline */}
-              <p className="text-sm text-muted-foreground">AUXAMATE – AI Simplified</p>
+              <p className="text-sm text-muted-foreground">AI Simplified</p>
             </div>
           </motion.div>
 

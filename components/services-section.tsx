@@ -107,24 +107,24 @@ function ServiceCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Card className="border border-border/50 group/canvas-card flex items-center justify-center h-[24rem] relative overflow-hidden">
+      <Card className="border border-border/50 flex items-center justify-center h-[24rem] relative overflow-hidden">
         <div className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black">+</div>
         <div className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black">+</div>
         <div className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black">+</div>
         <div className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black">+</div>
 
-        <div className="h-full w-full absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-300">
+        <div className="h-full w-full absolute inset-0">
           <CanvasRevealEffect animationSpeed={3} containerClassName="bg-black" colors={colors} dotSize={2} />
         </div>
 
         <div className="relative z-20 p-6 text-center">
-          <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center">
+          <div className="text-center w-full mx-auto flex items-center justify-center">
             {icon}
           </div>
-          <h3 className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+          <h3 className="dark:text-white text-xl relative z-10 text-black mt-4 font-bold">
             {title}
           </h3>
-          <p className="mt-2 text-muted-foreground opacity-0 group-hover/canvas-card:opacity-100 group-hover/canvas-card:text-white transition duration-200 text-sm">
+          <p className="mt-2 text-muted-foreground text-sm">
             {description}
           </p>
         </div>

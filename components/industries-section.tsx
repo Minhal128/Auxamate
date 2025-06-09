@@ -47,7 +47,7 @@ export function IndustriesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Industries We <span className="gradient-text">Serve</span>
+            Industries We <span className="gradient-text">have Served</span>
           </motion.h2>
           <motion.p
             className="max-w-[700px] text-muted-foreground md:text-lg"

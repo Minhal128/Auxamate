@@ -29,10 +29,10 @@ export function SponsorsSection() {
       name: "Pabbly",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qkKN6g6W612bftTq3USKf89hCJJYLM.png",
     },
-    // {
-    //   name: "Automate",
-    //   logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RG7KNPWAfdsUaIBvVrj7XhhgXoRMM7.png",
-    // },
+    {
+      name: "Retell",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RG7KNPWAfdsUaIBvVrj7XhhgXoRMM7.png",
+    },
     {
       name: "ManyChat",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hsgyEJS08xgJssAyA5SMVjgpgGFw6e.png",
@@ -45,6 +45,31 @@ export function SponsorsSection() {
       name: "CloseBot",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8jOHjAllGQEEH76rQMzs81UgDCxaZQ.png",
     },
+    {
+      name: "Dialogflow",
+      logo: "https://avatars.githubusercontent.com/u/8170782?s=280&v=4.jpg",
+    },
+    {
+      name: "GoHighLevel",
+      logo: "https://cdn.prod.website-files.com/5f15081919fdf673994ab5fd/6697e68b90253f000eed3a7c_HighLevel-Logo-(PNG).png",
+    },
+    {
+      name: "Salesforce",
+      logo: "https://icon2.cleanpng.com/20180626/rpy/aazwvpehz.webp",
+    },
+    {
+      name: "Hubspot",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGKQNpE5KbwgQjYkdxK6sLoEyhPeacS7RKgw&s.jpg",
+    },
+    {
+      name: "Zoho",
+      logo: "https://logowik.com/content/uploads/images/zoho-new9282.logowik.com.webp",
+    },
+    {
+      name: "Pipedrive",
+      logo: "https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/f2e2e04e-14be-474e-8d90-7162080c28b0.png?auto=format%2Ccompress&fit=max&w=256&q=75&ch=Width%2CDPR.jpg",
+    },
+
   ]
 
   return (

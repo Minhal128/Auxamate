@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { MessageSquare, Lightbulb, Code, Rocket } from "lucide-react"
+import React from "react"
 
 export function HowItWorksSection() {
   const steps = [
@@ -59,17 +60,16 @@ export function HowItWorksSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-0 relative z-10">
           {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              className="relative"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="flex flex-col items-center text-center p-6 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 hover:border-auxamate-pink/50 transition-all duration-300 hover:scale-105">
+            <React.Fragment key={index}>
+              <motion.div
+                className="flex-1 flex flex-col items-center text-center p-6 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 hover:border-auxamate-pink/50 transition-all duration-300 hover:scale-105 relative z-10"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 <div
                   className={`w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r ${step.color} mb-4 text-white`}
                 >
@@ -78,11 +78,14 @@ export function HowItWorksSection() {
                 <div className="text-3xl font-bold text-auxamate-pink mb-2">{step.step}</div>
                 <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                 <p className="text-muted-foreground text-sm">{step.description}</p>
-              </div>
+              </motion.div>
+              {/* Connector line, only between cards */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-auxamate-pink to-auxamate-purple transform -translate-y-1/2" />
+                <div className="hidden lg:flex items-center justify-center h-full">
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-auxamate-pink to-auxamate-purple" />
+                </div>
               )}
-            </motion.div>
+            </React.Fragment>
           ))}
         </div>
       </div>
