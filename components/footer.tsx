@@ -16,10 +16,10 @@ export function Footer() {
 
   const handleSocialClick = (platform: string) => {
     const urls = {
-      twitter: "https://twitter.com/auxamate",
-      github: "https://github.com/auxamate",
-      linkedin: "https://linkedin.com/company/auxamate",
-      instagram: "https://instagram.com/auxamate",
+      twitter: "https://x.com/mahad_aii?s=21",
+      github: "https://www.facebook.com/share/176CX1NDYr/?mibextid=wwXIfr",
+      linkedin: "https://www.linkedin.com/in/muhammad-mahad-mazhar-a19143294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      instagram: "https://www.instagram.com/mahad.aiii?igsh=MTFqcDNwdnFmMG1ucg%3D%3D&utm_source=qr",
     }
     window.open(urls[platform as keyof typeof urls], "_blank")
   }
