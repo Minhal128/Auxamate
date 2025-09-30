@@ -15,7 +15,7 @@ export function HeroSection() {
   }
 
   const handlePhoneCall = () => {
-    window.open("tel:+15551234567", "_self")
+    window.open("tel:+923322298529", "_self")
   }
 
   return (

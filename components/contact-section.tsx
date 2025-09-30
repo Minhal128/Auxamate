@@ -30,26 +30,48 @@ export function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent("New Consultation Request from " + formData.name)
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Message: ${formData.message}`
+      )
+      const mailtoLink = `mailto:info@auxamate.com?subject=${subject}&body=${body}`
+      
+      // Open email client
+      window.open(mailtoLink, '_self')
+      
+      // Simulate processing time
+      await new Promise((resolve) => setTimeout(resolve, 1000))
 
-    toast({
-      title: "Message Sent Successfully!",
-      description: "We'll get back to you within 24 hours.",
-      duration: 5000,
-    })
+      toast({
+        title: "Message Sent Successfully!",
+        description: "We'll get back to you within 24 hours.",
+        duration: 5000,
+      })
 
-    // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" })
-    setIsSubmitting(false)
+      // Reset form
+      setFormData({ name: "", email: "", phone: "", message: "" })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an issue sending your message. Please try again.",
+        duration: 5000,
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handlePhoneClick = () => {
-    window.open("tel:+15551234567", "_self")
+    window.open("tel:+923322298529", "_self")
   }
 
   const handleEmailClick = () => {
-    window.open("mailto:hello@auxamate.com", "_self")
+    window.open("mailto:info@auxamate.com", "_self")
   }
 
   const handleLocationClick = () => {
@@ -126,7 +148,7 @@ export function ContactSection() {
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+92 332 2298529"
                     value={formData.phone}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
@@ -195,7 +217,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+92 332 2298529</p>
                 </div>
               </motion.div>
 
@@ -210,7 +232,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-muted-foreground">hello@auxamate.com</p>
+                  <p className="text-muted-foreground">info@auxamate.com</p>
                 </div>
               </motion.div>
 

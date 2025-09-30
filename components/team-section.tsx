@@ -11,12 +11,12 @@ export function TeamSection() {
       name: "Mahad Mazhar",
       role: "CEO & Founder",
       bio: "Expert in developing and optimizing machine learning models for production environments and real-time applications.",
-      phone: "+1 (555) 123-4567",
+      phone: "+92 332 2298529",
       portfolio: "https://priyapatel.ml",
       socialLinks: {
-        twitter: "https://twitter.com/priyapatel",
-        linkedin: "https://linkedin.com/in/priyapatel",
-        github: "https://github.com/priyapatel",
+        twitter: "https://x.com/mahad_aii?s=21",
+        linkedin: "https://www.linkedin.com/in/muhammad-mahad-mazhar-a19143294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        github: "https://www.facebook.com/share/176CX1NDYr/?mibextid=wwXIfr",
       },
     },
   ]
@@ -32,7 +32,7 @@ export function TeamSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Meet Our <span className="gradient-text">Team</span>
+            Meet Our <span className="gradient-text">CEO</span>
           </motion.h2>
           <motion.p
             className="max-w-[700px] text-muted-foreground md:text-lg"
@@ -87,8 +87,8 @@ export function TeamSection() {
                   className="mb-4 w-full group-hover:bg-gradient-to-r group-hover:from-auxamate-pink/20 group-hover:to-auxamate-purple/20 group-hover:border-auxamate-pink/50 transition-all duration-300"
                   asChild
                 >
-                  <a href={member.portfolio} target="_blank" rel="noopener noreferrer">
-                    View Portfolio <ExternalLink className="ml-2 h-3 w-3" />
+                  <a href="mailto:mahad@auxamate.com" target="_blank" rel="noopener noreferrer">
+                    contact @ mahad@auxamate.com <ExternalLink className="ml-2 h-3 w-3" />
                   </a>
                 </Button>
 
