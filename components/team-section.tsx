@@ -41,7 +41,7 @@ export function TeamSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            The brilliant minds behind our AI innovations and intelligent solutions
+            The brilliant mind behind our AI innovations and intelligent solutions
           </motion.p>
         </div>
 

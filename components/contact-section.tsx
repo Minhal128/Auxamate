@@ -31,33 +31,38 @@ export function ContactSection() {
     setIsSubmitting(true)
 
     try {
-      // Create mailto link with form data
-      const subject = encodeURIComponent("New Consultation Request from " + formData.name)
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Phone: ${formData.phone}\n` +
-        `Message: ${formData.message}`
-      )
-      const mailtoLink = `mailto:info@auxamate.com?subject=${subject}&body=${body}`
-      
-      // Open email client
-      window.open(mailtoLink, '_self')
-      
-      // Simulate processing time
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      // Create FormData for Web3Forms API
+      const formDataToSubmit = new FormData()
+      formDataToSubmit.append("access_key", "613e8bf2-e273-4b0e-a1ff-a997de627a09")
+      formDataToSubmit.append("name", formData.name)
+      formDataToSubmit.append("email", formData.email)
+      formDataToSubmit.append("phone", formData.phone)
+      formDataToSubmit.append("message", formData.message)
+      formDataToSubmit.append("subject", `New Consultation Request from ${formData.name}`)
 
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
-        duration: 5000,
+      // Submit to Web3Forms API
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSubmit,
       })
 
-      // Reset form
-      setFormData({ name: "", email: "", phone: "", message: "" })
+      const data = await response.json()
+
+      if (data.success) {
+        toast({
+          title: "✅ Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours.",
+          duration: 5000,
+        })
+        // Reset form
+        setFormData({ name: "", email: "", phone: "", message: "" })
+      } else {
+        throw new Error(data.message || "Submission failed")
+      }
     } catch (error) {
+      console.error("Form submission error:", error)
       toast({
-        title: "Error",
+        title: "❌ Error",
         description: "There was an issue sending your message. Please try again.",
         duration: 5000,
       })
